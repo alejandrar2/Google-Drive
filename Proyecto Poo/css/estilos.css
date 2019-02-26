@@ -1,0 +1,139 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	color: black;
+}
+
+
+.navbar{
+	background: white;
+	margin: 0;
+	padding: 0px;
+	height:70px;
+}
+.nav-item {
+	margin: 0;
+	padding: 0;
+}
+.nav-link {
+	margin: 0px;
+	padding: 0px;
+
+
+}
+
+.fondo1{
+	background-image: url(../img/image1.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	padding: 300px;
+}
+
+.botonInicio{
+	color:white; 
+	border-radius:0em;
+	padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px
+}
+
+.nav-link-azul{
+	background: #4386fc;
+	color: white;
+	padding-top: 24px;
+	padding-bottom: 25px;
+	padding-right: 22px;
+	padding-left: 10px;
+	
+}
+
+
+
+.nav-link:hover{
+	color: black;
+	text-decoration: underline;
+}
+
+.titulo{
+	color: white;
+	text-align: center;
+	font-size: 4em;
+}
+.centro{
+	display: block;
+	text-align: center;
+
+}
+.espacio{
+	padding: 20px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.columna{
+	text-align: center;
+
+}
+.footer{
+	background-color: #F9F9F9;
+}
+/* Formulario 1 */
+
+.frm{
+	border: gray solid 1px;
+	 border-radius: 9px; 
+	 margin-top: 10px; 
+	 margin-bottom: 10px;
+	 
+}
+.frmb{
+	padding: 0px;
+    margin-top: 2px;
+    margin-bottom: 5px
+}
+
+.gc{
+	padding-left: 135px;
+    padding-bottom: 15px;
+}
+.acolor{
+
+	color: #009ADB;
+}
+.acolor:hover{
+	text-decoration:none;
+cursor: pointer;
+color: #009ADB;
+}
+.btn-sg{
+	padding:5px;
+	border: 1px solid #009ADB;
+	border-radius: 5px;
+	padding-left: 13px;
+	padding-right: 13px;
+	display: block; 
+	float: right
+}
+.btn-sg:hover{
+	cursor: pointer;
+
+}
+
+/* Formulario 2 */
+.frm-brd{
+ padding: 30px; 
+ border: solid 1px #DADCE0;
+ border-radius: 9px;
+}
+
+.lt{
+	font-size: 27px;
+}
+.lte{
+	font-size: 15px;
+}
