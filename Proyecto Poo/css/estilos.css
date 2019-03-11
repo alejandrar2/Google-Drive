@@ -31,7 +31,7 @@ a{
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
-	padding: 300px;
+	padding: 115px;
 }
 
 .botonInicio{
@@ -52,8 +52,9 @@ a{
 	
 }
 
-
-
+.cuadro{
+	margin: 100px;
+}
 .nav-link:hover{
 	color: black;
 	text-decoration: underline;
@@ -98,8 +99,24 @@ a{
 }
 
 .gc{
-	padding-left: 135px;
+	padding-left: 166px;
     padding-bottom: 15px;
+}
+
+.caja{
+	padding: 25px;
+	width: 90%;
+	margin-left: 20px;
+
+
+}
+
+.mv{
+	padding-left: 15px;
+}
+.mv2{
+	margin-right: 25px;
+
 }
 .acolor{
 
@@ -109,6 +126,16 @@ a{
 	text-decoration:none;
 cursor: pointer;
 color: #009ADB;
+}
+.fb{
+	background-color:#2F53D6; 
+	color: white;
+	margin-left:130px;
+}
+.fb1{
+	background-color:#2F53D6; 
+	color: white;
+	margin-left:90px;
 }
 .btn-sg{
 	padding:5px;
@@ -122,6 +149,10 @@ color: #009ADB;
 .btn-sg:hover{
 	cursor: pointer;
 
+}
+.espacio{
+	padding-left:10px ;
+	
 }
 
 /* Formulario 2 */
@@ -137,3 +168,12 @@ color: #009ADB;
 .lte{
 	font-size: 15px;
 }
+
+/* Formulario 3 */
+ 
+.sombra:hover{
+	border-radius: 5px;
+	background-color: #EEEEEE; 
+	color: black;
+	text-decoration: none;
+ }
