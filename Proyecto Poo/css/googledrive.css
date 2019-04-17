@@ -1,0 +1,292 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Open Sans; 
+    text-decoration: none;
+}
+
+
+.cont-menu{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+
+.container_first{
+    width: 84%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.horizontal{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0px;
+    width: 100%;
+    height: 80px;
+    min-width: 800px;
+    color: #696969; 
+    border-bottom: 1px solid #dfdfdf; 
+}
+
+.horizontal .text{
+    width: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #F5F5F5;
+    padding: 3px 16px;
+    margin: 0 20px;
+    border-radius: .4rem;
+}
+
+.horizontal .text input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    margin: 0 10px;
+    color: #696969; 
+    background: #F5F5F5;
+    border: none;
+    font-size: 1em;
+    outline: none;
+}
+
+.horizontal .text input[type="text"]:focus ~ .drop-down{
+    visibility: visible;
+    opacity: 1; 
+}
+
+.drop-down{
+    position: absolute;
+    top: 48px;
+    left: 0; 
+    background: #f1f1f1;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .1s;
+    border: 1px solid #ccc;
+    z-index: 10;
+}
+
+.drop-down a{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: .9em;
+    color: #696969;
+}
+
+.drop-down a span{
+    font-size: 1.5em;
+    padding: 5px 15px 0 0;
+    float: left;
+}
+
+.drop-down a p{
+    color: #696969;
+    padding: 10px;
+}
+
+.drop-down a:nth-child(1){
+    color: #f80000;
+}
+
+.drop-down a:nth-child(2){
+    color: #3563c7;
+}
+
+.drop-down a:nth-child(3){
+    color: #237e23;
+}
+
+.drop-down a:nth-child(4){
+    color: #c71010;
+}
+
+.drop-down a:nth-child(5){
+    color: #ffd900;
+}
+
+.drop-down a:nth-child(6){
+    color: #c71010;
+}
+
+.drop-down a:nth-child(7){
+    padding: 25px;
+    border-top: 1px solid #ccc;
+    background: #e7e7e7;
+}
+
+.drop-down a:hover{
+    background: #ccc;
+}
+
+.horizontal section{
+    padding: 10px;
+    width: 290px;
+    min-width: 290px;
+    border-radius: 50%;
+}
+
+.horizontal section label{
+    margin: 2px;
+    cursor: pointer;
+}
+
+.horizontal section label span{
+    padding: 5px 10px;
+    font-size: 1.3em;
+    border-radius: 50%;
+}
+
+.horizontal section label:hover span{
+    background: rgba(204, 204, 204, 0.4);
+    color: #000;
+}
+
+.horizontal section label:active span{
+    background: rgba(113, 157, 252, 0.3);
+    color: rgb(2, 60, 185); 
+}
+
+.vertical{
+    position: relative;
+    width: 16%;
+    min-width: 250px;
+    height: 100vh;
+    left: 0;
+}
+
+.buttons{
+    display: block;
+    color: #696969;
+}
+
+.first{
+    width: 130px;
+    margin: 10px 10px;
+}
+
+.first img{
+    float: left;
+    margin: 0 12px;
+}
+
+.first p{
+    display: block;
+    padding: 7px 0 0 0;
+    font-size: 1.3em
+}
+
+.first:active p{
+    text-decoration: underline;
+}
+
+.second{
+    background: #fff;
+    width: 130px;
+    padding: 8px;
+    border-radius: 3rem;
+    box-shadow: -1px 1px 5px #b3b3b3;
+    display: flex;
+    align-items: center;
+    margin: 40px 10px;
+    transition: all .3s;
+}
+
+.second:hover{
+    background: #fafafa;
+    box-shadow: -1px 2px 10px #b3b3b3;
+}
+
+.second p{
+    display: block;
+    padding-left: 10px; 
+    font-size: .8em;
+    font-weight: 530;
+}
+
+.vertical section label{
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 10px 30px;
+    margin: 5px 0px;
+    border-radius: 0  2rem 2rem 0;
+    font-size: .8em;
+    font-weight: bold;
+    color: #696969;
+}
+
+.vertical .container-frames{
+    position: absolute;
+    display: flex;
+    width: 100%;
+}
+
+.vertical section label span{
+    font-size: 1.3em;
+    padding-right: 15px;
+}
+
+.vertical section label:nth-child(7){
+    border-radius: 0;
+    padding: 20px 30px;
+    border-top: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+}
+
+.vertical section label:hover{
+    background: #f1f1f1;
+}
+
+.vertical section label:active{
+    background: rgba(113, 157, 252, 0.3);
+    color: rgb(2, 60, 185); 
+}
+
+.vertical section{
+    position: absolute;
+    width: 100%;
+    top: 140px;
+}
+
+.content_second{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.content_second input[type="radio"]{
+    display: none;
+}
+
+.content_second .sects{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    visibility: hidden;
+    opacity: 0;
+}
+
+.content_second .sects img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content_second section input[type="radio"]:checked ~ .sects{
+    visibility: visible;
+    opacity: 1;
+}
+
