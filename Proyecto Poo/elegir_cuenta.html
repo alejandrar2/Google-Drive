@@ -20,10 +20,8 @@
 						<ul class="list-group list-group-flush">
   							<li class="list-group-item sombra">cuenta</li>
   							<li class="list-group-item sombra">cuenta</li>
-  							<li class="list-group-item sombra">Usar otra cuenta</li>
+  							<li class="list-group-item sombra">Usar otra cuenta</li
 						</ul>
-					
-					
 				</div>
 				<div class="col-md-3"></div>
 			</div></div>

@@ -3,7 +3,7 @@ $("#btn-crear").click(function () {
 	alert("Funciona");
 });
 
-$("#btn-sig").click(function () {
+$("#btn-sg").click(function () {
 	// body...
 	alert("Funciona");
 	var nombre = $("#nombre").val();
@@ -20,4 +20,10 @@ $("#btn-sig").click(function () {
 
 	
 
+});
+
+$("#btn-cuestionario").click(function () {
+	// body...
+	alert("Funciona");
+	var correo = $("#correo-inicio").val();
 });

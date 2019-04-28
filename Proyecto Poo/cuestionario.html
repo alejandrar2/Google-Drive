@@ -30,7 +30,7 @@
 							<div class="row">
 								<div class="col">
 									<a class="acolor mv" href="#">Crear cuenta</a>
-									<button class="btn-sg btn-primary mv2">Siguiente</button>
+									<button  id="btn-cuestionario"class="btn-sg btn-primary mv2">Siguiente</button>
 								</div>
 							</div>
 						</div>
@@ -55,6 +55,7 @@
 		
 	</footer>
 	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/controlador.js"></script>
  	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
