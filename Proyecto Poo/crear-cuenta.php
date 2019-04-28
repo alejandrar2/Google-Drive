@@ -21,7 +21,7 @@
 					<img src="img/image8.png">
 					<h1 class="lt" >Crear tu cuenta de Google</h1>
 					<h2 class="lte" >Ir a Google Drive</h2><br>
-					<form>
+				
 						<div class="row">
 							<div class="col">
 								<input type="text" class="form-control" placeholder="Nombre" id="nombre" >
@@ -56,7 +56,7 @@
 						<br>
 						<a style="font-size: 13px;" class="acolor" href=""><b>Acceder a tu cuenta en su lugar</b> </a>
 						<button id="btn-sg" class="btn btn-primary" style="display: block;float: right;" type="submit">Siguiente</button>
-					</form>
+				
 				</div>
 				<div class="col-6">
 					<br><br>
