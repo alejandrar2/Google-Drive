@@ -39,12 +39,12 @@
 						<div class="row">
 							<div class="col">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Contraseña" id="contraseña" required autofocus>	
+									<input type="text" class="form-control" placeholder="Contraseña" id="contra1" required autofocus>	
 								</div>
 							</div>
 							<div class="col">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Confirmacion" id="confirmacion" required autofocus>	
+									<input type="text" class="form-control" placeholder="Confirmacion" id="contra2" required autofocus>	
 								</div>
 								
 							</div>
@@ -55,7 +55,7 @@
 						</div>
 						<br>
 						<a style="font-size: 13px;" class="acolor" href=""><b>Acceder a tu cuenta en su lugar</b> </a>
-						<button class="btn btn-primary" style="display: block;float: right;" type="submit">Siguiente</button>
+						<button id="btn-sg" class="btn btn-primary" style="display: block;float: right;" type="submit">Siguiente</button>
 					</form>
 				</div>
 				<div class="col-6">
@@ -64,7 +64,7 @@
 						<img  src="img/image9.png">
 					</div>
 					<p class="centro">Una cuenta. Todos los servicios de<br> Google a tu disposición.</p>
-					<button class="btn btn-primary fb1">Iniciar con Facebook</button><br>
+					<button id="btn-crear" class="btn btn-primary fb1">Iniciar con Facebook</button><br>
 				</div>
 				<br><br><br>
 			</div>
@@ -77,6 +77,11 @@
 
 
 </div>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/controlador.js"></script>
+ 	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
 
 
 
