@@ -8,24 +8,25 @@
 		private $contra2;
 		
 		 public function __construct(
-		$codigoUsuario;
-		$codigoPersona;
+		$codigoUsuario,
+		$codigoPersona,
     	$correo1,
     	$correo2,
     	$contra1,
     	$contra2
     ){
-		 	$this->codigoUsuario = $codigoUsuario;
-		 	$this->codigoPersona =$codigoPersona;
-		   $this->correo1 = $correo1;
-		   $this->correo2 = $correo2;
-           $this->contra1 = $contra1;
-           $this->contra2 = $dato2;
-		 }
-		  public function getcodigoUsuario()
-        {
-                return $this->codigoUsuario;
-        }
+		$this->codigoUsuario = $codigoUsuario;
+		$this->codigoPersona =$codigoPersona;
+		$this->correo1 = $correo1;
+		$this->correo2 = $correo2;
+        $this->contra1 = $contra1;
+        $this->contra2 = $dato2;
+	}
+		 
+    public function getcodigoUsuario()
+    {
+        return $this->codigoUsuario;
+    }
 
         
    
@@ -100,18 +101,34 @@
 
                 return $this;
         }
-         public function agregar()
-        {
+        
+        public function guardarUsuario(){
+        $personas = json_decode(file_get_contents("../data/personas.json"),true);
+                
+        $t["codigoTarjeta"]=($personas[count($personas)-1]["codigoUsuario"])+1;
+        $t["codigoUsuario"]=$this->codigoUsuario;
+        $t["correo1"]=$this->correo1;
+        $t["correo2"]=$this->correo2;
+        $t["contra1"]=$this->contra1;
+        $t["contra2"]=$this->contra2;
+                
+        $personas[] = $t;
+        $archivo = fopen("../data/personas.json","w");
+        fwrite($archivo, json_encode($personas));
+    }
                
-        }
-         public function buscar($codigo)
-        {
+        
+    public function buscar($codigo){
                
+    }
+         
+    public function validarcontra($contra1, $contra2){
+        if ($contra1==$contra2) {
+            return true;
+        }else{
+            return false;
         }
-         public function validarcontra($contra1, $contra2)
-        {
-               
-        }
+    }
 
 
 

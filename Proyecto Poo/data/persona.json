@@ -1,9 +1,1 @@
-[
-
-	{"codigoUsuario":4,"nombre":"morgan","apellido":"sexy"},
-	{"codigoUsuario":2,"nombre":"elbryan","apellido":"selasabe"},
-	{"codigoUsuario":1,"nombre":"elcalix","apellido":"delmal"}
-
-
-
-]
+[{"codigoUsuario":1,"nombre":"morgan","apellido":"sexy"},{"codigoUsuario":2,"nombre":"elbryan","apellido":"selasabe"},{"codigoUsuario":3,"nombre":"elcalix","apellido":"delmal"},{"codigoPersona":4,"nombre":"Rubi","apellido":"Gomez"},{"codigoPersona":5,"nombre":"Rubi","apellido":"Gomez"},{"codigoPersona":6,"nombre":"Rubi","apellido":"Gomez"}]

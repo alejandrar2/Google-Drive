@@ -5,8 +5,9 @@
 		private $apellido;
 		
 		 public function __construct(
+        $codigoUsuario,
     	$nombre,
-    	$apellido,
+    	$apellido
     ){     $this->codigoUsuario = $codigoUsuario;
            $this->nombre = $nombre;
            $this->apellido = $apellido;
@@ -25,13 +26,6 @@
                 return $this;
         }
 
-
-
-	 public function getnombre()
-        {
-                return $this->nombre;
-        }
-
      
         public function setnombre($apellido)
         {
@@ -39,37 +33,33 @@
 
                 return $this;
         }
+
          public function getnombre()
         {
-                return $this->apellido;
+                return $this->nombre;
         }
-        
-               
         
         
     public function guardarPersona(){
-        $personas = json_decode(file_get_contents("../data/personas.json"),true);
+
+        $personas = json_decode(file_get_contents("../data/persona.json"),true);
                 
         $t["codigoPersona"]=($personas[count($personas)-1]["codigoPersona"])+1;
         $t["nombre"]=$this->nombre;
         $t["apellido"]=$this->apellido;
                 
         $personas[] = $t;
-        $archivo = fopen("../data/personas.json","w");
-        fwrite($archivo, json_encode($personas));
+        $archivo = fopen("../data/persona.json","w");
+        fwrite($archivo, json_encode($personas)."\n");
     }
 
     public function obtenerUltimo(){
-        $personas = json_decode(file_get_contents("../data/personas.json"),true);
+        $personas = json_decode(file_get_contents("../data/persona.json"),true);
 
         return count($personas);
 
 
     }
-
-
-        
-
-
 }
+
 ?>
