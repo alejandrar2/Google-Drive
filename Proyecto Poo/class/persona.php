@@ -43,18 +43,29 @@
         {
                 return $this->apellido;
         }
-         public function agregar()
-        {
+        
                
-        }
-         public function buscar()
-        {
-               
-        }
-        public function obtenerUltimo()
-        {
-               
-        }
+        
+        
+    public function guardarPersona(){
+        $personas = json_decode(file_get_contents("../data/personas.json"),true);
+                
+        $t["codigoPersona"]=($personas[count($personas)-1]["codigoPersona"])+1;
+        $t["nombre"]=$this->nombre;
+        $t["apellido"]=$this->apellido;
+                
+        $personas[] = $t;
+        $archivo = fopen("../data/personas.json","w");
+        fwrite($archivo, json_encode($personas));
+    }
+
+    public function obtenerUltimo(){
+        $personas = json_decode(file_get_contents("../data/personas.json"),true);
+
+        return count($personas);
+
+
+    }
 
 
         
