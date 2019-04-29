@@ -1,22 +1,29 @@
 <?php
-  class usuario{
+  class Carpeta{
 		private $codigoCarpeta; 
-		private $codigoArchivo;
 		private $codigoUsuario;
         private $nombre;
         private $fecha;
 
 		
+<<<<<<< HEAD
 	public function __construct(
         $codigoCarpeta,
     	$codigoArchivo,
+=======
+		 public function __construct(
+    	$codigoCarpeta,
+>>>>>>> 48ab91cdae7fc74468e6682e3fe96f38e385dac4
     	$codigoUsuario,
         $nombre,
         $fecha
     
     ){
 		   $this->codigocarpeta = $codigoCarpeta;
+<<<<<<< HEAD
 		   $this->codigoarchivo = $codigoArchivo;
+=======
+>>>>>>> 48ab91cdae7fc74468e6682e3fe96f38e385dac4
            $this->codigoUsuario = $codigoUsuario;
            $this->nombre = $nombre;
            $this->fecha = $fecha;
@@ -32,20 +39,6 @@
         public function setcodigoCarpeta($codigoCarpeta)
         {
                 $this->codigoCarpeta = $codigoCarpeta;
-
-                return $this;
-        }
-
-         public function getcodigoArchivo()
-        {
-                return $this->codigoArchivo;
-        }
-
-        
-       
-        public function setcodigoArchivo($codigoArchivo)
-        {
-                $this->codigoArchivo = $codigoArchivo;
 
                 return $this;
         }
@@ -91,6 +84,18 @@
 
                 return $this;
         }
+
+        public static function obtenerId($carpeta){
+            $carpetas = json_decode(file_get-contents("../data/carpeta.json"),true);
+
+            for ($i=0; $i < count($carpetas); $i++) { 
+                # code...
+                if ($carpetas[$i]["nombre"]==$carpeta) {
+                    return $i;
+                }
+            }
+
+    }
 
  }
 ?>
