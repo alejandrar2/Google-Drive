@@ -55,7 +55,6 @@
 
     public function obtenerUltimo(){
         $personas = json_decode(file_get_contents("../data/persona.json"),true);
-
         return count($personas);
 
 

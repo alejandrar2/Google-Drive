@@ -3,19 +3,29 @@
             include("../class/persona.php");
 
             $persona = new Persona(null,$_POST["nombre"],$_POST["apellido"]);
-            $persona->agregar();
-            $ultimo = Persona->obtenerUltimo();
+            $persona->guardarPersona();
+            $ultimo = $persona->obtenerUltimo();
 
             $usuario = new Usuario(
                   null,
                   $ultimo,
-                  $_POST["correo1"],
-                  $_POST["correo2"],
+                  $_POST["correo"],
                   $_POST["contra1"],
                   $_POST["contra2"]
                   );
 
-            $usuario->agregar();
+            $usuario->guardarUsuario();
+
+            
+
 
             echo '{"resultado": "Agregado", "Codigo": 1 }';
+
+           
+
+
+      
+
+     
+     
 ?>

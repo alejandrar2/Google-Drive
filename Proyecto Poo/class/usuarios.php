@@ -2,25 +2,22 @@
   class usuario{
   	    private $codigoUsuario;
   	    private $codigoPersona;
-		private $correo1; 
-		private $correo2;
+		private $correo;
 		private $contra1;
 		private $contra2;
 		
 		 public function __construct(
 		$codigoUsuario,
 		$codigoPersona,
-    	$correo1,
-    	$correo2,
+    	$correo,
     	$contra1,
     	$contra2
     ){
 		$this->codigoUsuario = $codigoUsuario;
 		$this->codigoPersona =$codigoPersona;
-		$this->correo1 = $correo1;
-		$this->correo2 = $correo2;
+		$this->correo = $correo;
         $this->contra1 = $contra1;
-        $this->contra2 = $dato2;
+        $this->contra2 = $contra2;
 	}
 		 
     public function getcodigoUsuario()
@@ -51,34 +48,20 @@
         }
 
 		 
-        public function getcorreo1()
+        public function getcorreo()
         {
-                return $this->correo1;
+                return $this->correo;
         }
 
         
       
-        public function setcorreo1($correo1)
+        public function setcorreo($correo)
         {
-                $this->correo1 = $correo1;
+                $this->correo = $correo;
 
                 return $this;
         }
-         public function getcorreo2()
-        {
-                return $this->correo2;
-        }
-
         
-        
-        public function setcorreo2($correo2)
-        {
-                $this->correo2 = $correo2;
-
-                return $this;
-        }
-
-       
         public function getcontra1()
         {
                 return $this->contra1;
@@ -103,17 +86,16 @@
         }
         
         public function guardarUsuario(){
-        $personas = json_decode(file_get_contents("../data/personas.json"),true);
+        $personas = json_decode(file_get_contents("../data/usuario.json"),true);
                 
-        $t["codigoTarjeta"]=($personas[count($personas)-1]["codigoUsuario"])+1;
+        $t["codigoUsuario"]=($personas[count($personas)-1]["codigoUsuario"])+1;
         $t["codigoUsuario"]=$this->codigoUsuario;
-        $t["correo1"]=$this->correo1;
-        $t["correo2"]=$this->correo2;
+        $t["correo1"]=$this->correo;
         $t["contra1"]=$this->contra1;
         $t["contra2"]=$this->contra2;
                 
         $personas[] = $t;
-        $archivo = fopen("../data/personas.json","w");
+        $archivo = fopen("../data/usuario.json","w");
         fwrite($archivo, json_encode($personas));
     }
                

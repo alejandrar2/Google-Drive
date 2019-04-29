@@ -3,20 +3,20 @@
 		private $codigoCarpeta; 
 		private $codigoArchivo;
 		private $codigoUsuario;
-    private $nombre;
-    private $fecha;
+        private $nombre;
+        private $fecha;
 
 		
-		 public function __construct(
-    	$codigoCarpeta,
+	public function __construct(
+        $codigoCarpeta,
     	$codigoArchivo,
     	$codigoUsuario,
-      $nombre,
-      $fecha
+        $nombre,
+        $fecha
     
     ){
-		       $this->codigocarpeta = $codigoCarpeta;
-		       $this->codigoarchivo = $codigoArchivo;
+		   $this->codigocarpeta = $codigoCarpeta;
+		   $this->codigoarchivo = $codigoArchivo;
            $this->codigoUsuario = $codigoUsuario;
            $this->nombre = $nombre;
            $this->fecha = $fecha;
