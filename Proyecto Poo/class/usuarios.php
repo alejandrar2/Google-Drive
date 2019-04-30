@@ -111,6 +111,28 @@
             return false;
         }
     }
+    
+    public static function validarCorreo($correo){
+        $usuario = json_decode(file_get_contents("../data/usuario.json"),true);
+
+        for($i=0; $i < count($usuario); $i++){
+            if($usuario[$i]["correo"] == $correo){
+                return true;
+            }
+        }
+        return null;
+    }
+
+    public static function validarContrasenia($contrasenia){
+        $usuarios = json_decode(file_get_contents("../data/usuario.json"),true);
+
+        for($i=0; $i < count($usuarios); $i++){
+            if($usuarios[$i]["contra1"] == $contrasenia){
+                return true;
+            }
+        }
+        return false;
+    } 
 
 
 

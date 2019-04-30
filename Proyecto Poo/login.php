@@ -17,12 +17,12 @@
 					<img class="gc" src="img/image8.png">
 					<h3 class="text-center">Acceder</h3>
 					<h4 class="text-center">Ir a Google Drive</h4>
-					<form>
 						<div class="form-group ">
 							<label></label>
 							<input class="form-control caja " type="email" name="correo" id="correo-inicio"  placeholder="Correo electrónico o telefono">
 						</div>
 						<div class="form-group ">
+							<div id="respuesta"></div
 							<a class="acolor mv" href="#">¿Olvidaste el correo electrónico?</a>
 							<br><br>
 							<button class="btn btn-primary fb">Iniciar con Facebook</button><br>
@@ -30,11 +30,10 @@
 							<div class="row">
 								<div class="col">
 									<a class="acolor mv" href="#">Crear cuenta</a>
-									<button  id="btn-cuestionario"class="btn-sg btn-primary mv2">Siguiente</button>
+									<button  id="btn-login"class="btn-sg btn-primary mv2">Siguiente</button>
 								</div>
 							</div>
 						</div>
-					</form>
 					
 				</div>
 				<div class="col-md-3"></div>
