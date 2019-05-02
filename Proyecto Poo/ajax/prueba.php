@@ -1,22 +1,10 @@
 <?php
- include("../class/usuarios.php");
+ include("../class/carpeta.php");
 
-   if(Usuario::validarCorreo("hola.ruby@hotmail.com")){
+ $carpeta= new carpeta(null,"home",1,"Rubio por eso te silencie","12/12/12");
 
-            echo '{"status":1, "mensaje":"correo"}';
-     }else{
-            echo '{"status":0, "mensaje":"Fallo"}';
-     }
-    
+ $carpeta->agregarCarpeta();
 
-      echo"<br>";
-
-    
-     if(Usuario::validarContrasenia("rr")){
-                  echo '{"status":1, "mensaje":"contra"}';
-     }else{
-                   echo '{"status":0, "mensaje":"Fallo"}';
-          }
 
 
 ?>

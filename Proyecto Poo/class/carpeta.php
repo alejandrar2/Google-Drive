@@ -1,29 +1,23 @@
 <?php
   class Carpeta{
 		private $codigoCarpeta; 
+        private $carpeta;
 		private $codigoUsuario;
         private $nombre;
         private $fecha;
 
 		
-<<<<<<< HEAD
+
 	public function __construct(
         $codigoCarpeta,
-    	$codigoArchivo,
-=======
-		 public function __construct(
-    	$codigoCarpeta,
->>>>>>> 48ab91cdae7fc74468e6682e3fe96f38e385dac4
-    	$codigoUsuario,
+        $carpeta,
+        $codigoUsuario,    	
         $nombre,
         $fecha
     
     ){
 		   $this->codigocarpeta = $codigoCarpeta;
-<<<<<<< HEAD
-		   $this->codigoarchivo = $codigoArchivo;
-=======
->>>>>>> 48ab91cdae7fc74468e6682e3fe96f38e385dac4
+		   $this->carpeta = $carpeta;
            $this->codigoUsuario = $codigoUsuario;
            $this->nombre = $nombre;
            $this->fecha = $fecha;
@@ -77,7 +71,7 @@
         }
 
         
-         */ 
+
         public function setfecha($fecha)
         {
                 $this->fecha = $fecha;
@@ -95,7 +89,23 @@
                 }
             }
 
-    }
+        }
 
- }
+        public function agregarCarpeta(){
+            $carpetas = json_decode(file_get_contents("../data/carpeta.json"),true);
+
+                $t["codigoCarpeta"]=( $carpetas[count($carpetas)-1]["codigoCarpeta"] )+1;
+                $t["carpeta"]=$this->carpeta;
+                $t["codigoUsuario"]=$this->codigoUsuario;
+                $t["nombre"]=$this->nombre;
+                $t["fecha"]=$this->fecha;
+                
+                $carpeta[] = $t;
+                $carp = fopen("../data/carpeta.json","w");
+                fwrite($carp, json_encode($carpeta));
+            
+
+        }
+
+}
 ?>

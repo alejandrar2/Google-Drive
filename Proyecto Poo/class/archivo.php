@@ -1,6 +1,7 @@
 <?php
   class Archivo{
-		private $codigoArchivo; 
+		private $codigoArchivo;
+        private $codigoUsuario; 
         private $codigoCartpeta;
 		private $extencion;
         private $nombre;
@@ -9,6 +10,7 @@
 		
 		 public function __construct(
     	$codigoArchivo,
+        $codigoUsuario
         $codigoCarpeta,
     	$extencion,
         $nombre,
@@ -94,6 +96,7 @@
                 $archivos = json_decode(file_get_contents("../data/archivo.json"),true);
                 
                 $t["codigoArchivo"]=( $archivos[count($archivos)-1]["codigoArchivo"] )+1;
+                $t["codigoUsuario"]=$this->codigoUsuario;
                 $t["codigoCarpeta"]=$this->codigoCarpeta;
                 $t["extencion"]=$this->extencion;
                 $t["nombre"]=$this->nombre;
