@@ -106,3 +106,71 @@ $("#btn-contrasenia").click(function () {
 		}
 	});
 });
+
+
+
+$("#btn-contrasenia").click(function () {
+	
+	if ($("#contrasenia").val()=="") {
+		//alert("Correo vacio");
+		$("#respuesta").html(
+				`<div class="alert alert-danger" role="alert">
+					correo incorrecto
+				</div>`);
+		return;
+	}
+
+	var contrasenia = $("#contrasenia").val();
+	var parametros = "contrasenia="+contrasenia;
+	$.ajax({
+		url:'ajax/usuario.php?accion=validarContrasenia',
+		method:'POST',
+		data:parametros,
+		dataType:'json',
+		success:function(res){
+			console.log(res);
+
+			if(res.status == 1){
+				location.href ="googledrive.php?";
+			}else{
+				$("#res").html(`<div class="alert alert-danger" role="alert">
+									correo incorrecto
+								</div>`)
+			}
+
+		}
+	});
+});
+
+
+
+$("#btn-agregarCarpeta").click(function () {
+
+	var parametros = "nombreCarpeta="+$("#nombreC").val()+"&carpeta="+$("#txt-carpeta-actual").val()+"&usuario="+$("#usuario").val();
+
+	$.ajax({
+		url:'ajax/carpeta.php?accion=agregar',
+		method:'POST',
+		data:parametros,
+		dataType:'json',
+		success:function(res){
+			console.log(res);
+
+			if(res.status == 1){
+				
+				$("#capetas").append(
+					`<div class="col-md-3">
+                        <a href="googledrive.php?carpetaActual=${ $("#txt-carpeta-actual").val()  }">
+                            <p>
+                              <i style="font-size: 40px; padding-right: 10px; color: gray;" class="fas fa-folder folder "></i>
+                                 ${ $("#nombreC").val()  }
+                            </p>
+                        </a>
+                    </div>`
+
+					);
+
+			}
+		}
+	});
+});

@@ -76,8 +76,8 @@
                 <div class="sects">
                     <br><br>
                     <label>Carpetas</label>
-                    <div class="carpetas" id="carpetas">
-                        <div class="row">
+                    <div class="carpetas" >
+                        <div class="row" id="carpetas">
                             <div class="col-md-3">
                                 <a href="googledrive.php?carpeta=nombre">
                                     <p>
@@ -100,12 +100,17 @@
                                     Nombre
                                 </p>
                             </div>
-                            <div class="col-md-3">
-                                <p>
+                            
+                                <div class="col-md-3">
+                                    <a href="googledrive.php">
+                                    <p>
                                     <i style="font-size: 40px; padding-right: 10px; color: gray;" class="fas fa-folder folder "></i>
                                     Nombre
-                                </p>
-                            </div>
+                                    </p>
+                                </a>
+                                </div>
+                            
+                            
                         </div>
 
                         <br><br><br>
