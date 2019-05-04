@@ -90,6 +90,13 @@
                 -->
                 </div>
        </div>  
+
+       <form action="subir.php" method="POST" enctype="multipart/form-data">
+           <input type="file" name="archivo"><br>
+           <br>
+           <button>Subir Archivo</button>
+
+       </form>
        
 
 
