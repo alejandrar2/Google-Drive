@@ -79,32 +79,45 @@
                 return $this;
         }
 
-        public static function obtenerId($carpeta){
-            $carpetas = json_decode(file_get-contents("../data/carpeta.json"),true);
+        public static function obtener($carpeta, $usuario){
+            $carpetas = json_decode(file_get_contents("../data/carpeta.json"),true);
+            $tem = array();
+            $con=0;
 
             for ($i=0; $i < count($carpetas); $i++) { 
-                # code...
-                if ($carpetas[$i]["nombre"]==$carpeta) {
-                    return $i;
+                if ($carpetas[$i]["CodigoUsuario"]==$usuario && $carpetas[$i]["carpeta"]==$carpeta ) {
+                   $tem[$con]=$carpetas[$i];
+                   $con++;
                 }
             }
-
+            return json_encode($tem);
         }
 
+        
         public function agregarCarpeta(){
-            $carpetas = json_decode(file_get_contents("../data/carpeta.json"),true);
+                $carpetas = json_decode(file_get_contents("../data/carpeta.json"),true);
 
-                $t["codigoCarpeta"]=( $carpetas[count($carpetas)-1]["codigoCarpeta"] )+1;
+                $t["codigoCarpeta"]=( $carpetas[count($carpetas)-1]["codigoCarpeta"] )+1;;
                 $t["carpeta"]=$this->carpeta;
-                $t["codigoUsuario"]=$this->codigoUsuario;
+                $t["CodigoUsuario"]=$this->codigoUsuario;
                 $t["nombre"]=$this->nombre;
                 $t["fecha"]=$this->fecha;
                 
-                $carpeta[] = $t;
-                $carp = fopen("../data/carpeta.json","w");
-                fwrite($carp, json_encode($carpeta));
-            
+                $carpetas[] = $t;
+                $archivo = fopen("../data/carpeta.json","w");
+                fwrite($archivo, json_encode($carpetas));  
 
+        }
+
+        public static function obtenerId($nombreCarpeta, $codigoUsuario){
+            $carpetas = json_decode(file_get_contents("../data/carpeta.json"),true);
+
+            for ($i=0; $i < count($carpetas); $i++) { 
+                if ($carpetas[$i]["CodigoUsuario"]==$codigoUsuario && $carpetas[$i]["nombre"]==$nombreCarpeta ) {
+                   return $carpetas[$i]["codigoCarpeta"];
+                }
+            }
+            
         }
 
 }

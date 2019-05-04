@@ -3,6 +3,7 @@
 		private $codigoArchivo;
         private $codigoUsuario; 
         private $codigoCartpeta;
+        private $usuario;
 		private $extencion;
         private $nombre;
         private $fecha;
@@ -10,8 +11,9 @@
 		
 		 public function __construct(
     	$codigoArchivo,
-        $codigoUsuario
+        $codigoUsuario,
         $codigoCarpeta,
+        $usuario,
     	$extencion,
         $nombre,
         $fecha
@@ -19,6 +21,7 @@
     ){
 		   $this->codigoArchivo = $codigoArchivo;
            $this->codigoCarpeta = $codigoCarpeta;
+           $this->usuario = $usuario;
 		   $this->extencion = $extencion;
            $this->nombre = $nombre;
            $this->fecha = $fecha;
@@ -98,6 +101,7 @@
                 $t["codigoArchivo"]=( $archivos[count($archivos)-1]["codigoArchivo"] )+1;
                 $t["codigoUsuario"]=$this->codigoUsuario;
                 $t["codigoCarpeta"]=$this->codigoCarpeta;
+                $t["usuario"]=$this->usuario;
                 $t["extencion"]=$this->extencion;
                 $t["nombre"]=$this->nombre;
                 $t["fecha"]=$this->fecha;

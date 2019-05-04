@@ -1,9 +1,12 @@
 <?php
- include("../class/carpeta.php");
+ 
+	include_once '../class/class-carpeta.php';
 
- $carpeta= new carpeta(null,"home",1,"Rubio por eso te silencie","12/12/12");
 
- $carpeta->agregarCarpeta();
+ 
+ 
+	echo Carpeta::obtener("home",1);
+
 
 
 
