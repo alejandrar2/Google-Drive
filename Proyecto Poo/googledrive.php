@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/googledrive.css">
     <link rel="icon" href="img/Google_Drive_logo.png">
-    prueba para ver si te aparece el cambio
     <title>Google Drive</title>
     <style>
        @font-face{
