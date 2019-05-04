@@ -17,7 +17,7 @@
 						<p class="text-center"> <?php echo $_GET["correo"] ?> </p>
 						<div class="form-group ">
 							<label></label>
-							<input class="form-control caja " type="email" name="correo" id="correo-inicio"  placeholder="Correo electrónico o telefono">
+							<input class="form-control caja " type="email" name="correo" id="contrasenia"  placeholder="Correo electrónico o telefono">
 						</div>
 						<div class="form-group ">
 							<a class="acolor mv" href="#">¿Olvidaste la contraseña?</a>
