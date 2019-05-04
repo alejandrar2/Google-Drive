@@ -13,8 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/googledrive.css">
     <link rel="icon" href="img/Google_Drive_logo.png">
     <title>Google Drive</title>
@@ -59,152 +58,40 @@
                         <a href="#"><span><i class="fas fa-file-video"></i></span><p>Videos</p></a>
                         <a href="#">Otras Herramientas</a>
                     </div>
-                </div>
-            <section>
-                <label for="chk"><span><i class="fas fa-question-circle"></i></span></label>
-                <label for="chk"><span><i class="fas fa-cog"></i></span></label>
-                <label for="chk"><span><i class="fas fa-th"></i></i></span></label>
-                <label for="chk"><span><i class="fas fa-bell"></i></span></label>
-                <label for="chk"><span><i class="fas fa-user-circle"></i></span></label>
-            </section>
+                </div>  
+                <section>
+                    <label for="chk"><span><i class="fas fa-question-circle"></i></span></label>
+                    <label for="chk"><span><i class="fas fa-cog"></i></span></label>
+                    <label for="chk"><span><i class="fas fa-th"></i></i></span></label>
+                    <label for="chk"><span><i class="fas fa-bell"></i></span></label>
+                    <label for="chk"><span><i class="fas fa-user-circle"></i></span></label>
+                </section>
+                
       </div>
-      <div class="content_second">
-        <input type="text" id="txt-carpeta-actual" class="form-control" 
+      <!--FIN Menu-->
+      <div class=" container-fluid content_second">
+        <input type="text" id="carpetaActual" class="form-control" 
                 value="<?php echo isset($_GET['carpeta'])?$_GET['carpeta']:''; ?>" disabled><br>
-            <section>
-                <!--Menu-->
-                <input type="radio" name="rads2" id="rad1" class="rads" checked="">
-                <div class="sects">
-                    <br><br>
-                    <label>Carpetas</label>
-                    <div class="carpetas" >
-                        <div class="row" id="carpetas">
-                            <div class="col-md-3">
-                                <a href="googledrive.php?carpeta=nombre">
-                                    <p>
-                                    <i style="font-size: 40px; padding-right: 10px; color: gray;" class="fas fa-folder folder"></i>
-                                    Nombre 
-                                    </p>
-                                </a>
 
-                            </div>
-
-                            <div class="col-md-3">
-                                <p>
-                                    <i style="font-size: 40px; padding-right: 10px; color: gray;" class="fas fa-folder folder "></i>
-                                    Nombre
-                                </p>
-                            </div>
-                            <div class="col-md-3">
-                                <p>
-                                    <i style="font-size: 40px; padding-right: 10px; color: gray;" class="fas fa-folder folder "></i>
-                                    Nombre
-                                </p>
-                            </div>
-                            
-                                <div class="col-md-3">
-                                    <a href="googledrive.php">
-                                    <p>
-                                    <i style="font-size: 40px; padding-right: 10px; color: gray;" class="fas fa-folder folder "></i>
-                                    Nombre
-                                    </p>
-                                </a>
-                                </div>
-                            
-                            
-                        </div>
-
-                        <br><br><br>
-
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="    dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Nuevo
-                            </button>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          
+                <div class="row" id="carpetas">
+                    <div id="mensaje"></div>
+                    <!--
+                    <div class="col-md-3 carpeta m-2">
+                        <a href="index.php?carpeta=nombre"><i class="fas fa-folder tamanio"></i> <span class="nombre">Fotos</span> </a>
+                    </div>
+                -->
+                </div>
     
-    <input type="file" class="dropdown-item archivo" name="" >
-    <input type="file" class="dropdown-item" name="" > 
-   
-  </div>
-</div>
 
-<button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#exampleModal">
-         Carpeta 
-    </button>
+
             
-                <!--FIN Menu-->
-            </section>
-            <section>
-                <input type="radio" name="rads2" id="rad2" class="rads">
-                <div class="sects">
-                    <img src="img/drive_2.PNG" alt="Sorry not found :/">
-                </div>
-            </section>
-            <section>
-                <input type="radio" name="rads2" id="rad3" class="rads">
-                <div class="sects">
-                    <img src="img/drive_3.PNG" alt="Sorry not found :/">
-                </div>
-            </section>
-            <section>
-                <input type="radio" name="rads2" id="rad4" class="rads">
-                <div class="sects">
-                    <img src="img/drive_4.PNG" alt="Sorry not found :/">
-                </div>
-            </section>
-            <section>
-                <input type="radio" name="rads2" id="rad5" class="rads">
-                <div class="sects">
-                    <img src="img/drive_5.PNG" alt="Sorry not found :/">
-                </div>
-            </section>
-            <section>
-                <input type="radio" name="rads2" id="rad6" class="rads">
-                <div class="sects">
-                    <img src="img/drive_6.PNG" alt="Sorry not found :/">
-                </div>
-            </section>
-            <section>
-                <input type="radio" name="rads2" id="rad7" class="rads">
-                <div class="sects">
-                    <img src="img/drive_7.PNG" alt="Sorry not found :/">
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <!--MODAL-->
-
-
-
-
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <label>Carpeta Nueva</label><br>
-        <input class="form-control" type="text" name="" id="nombreC" >  
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Crear</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-    
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            
+       </div>  
+       
+   
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/controlador.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
 </body>
 </html>

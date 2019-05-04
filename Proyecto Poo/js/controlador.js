@@ -1,3 +1,73 @@
+$(document).ready(function($) {
+
+	/*CARPETAS*/
+	console.log("listo");	
+	var parametros = "carpeta="+$("#carpetaActual").val();
+	$.ajax({
+		url:"ajax/carpeta.php?accion=obtener",
+		dataType:'json',
+		method:"POST",
+		data:parametros,
+		success:function(respuesta){
+			console.log("carpetas");
+			console.log(respuesta);
+			for (i = 0; i < respuesta.length ; i++) {
+
+				$("#carpetas").append(
+				`<div class="col-md-2 carpeta m-2">
+					<a href="googledrive.php?carpeta=${respuesta[i].nombre}"><i class="fas fa-folder tamanio"></i> <span class="nombre">${respuesta[i].nombre}</span> </a>
+				</div>`
+				);
+			}	
+			if ( respuesta.length == 0) {
+				$("#mensaje").append('<p class="text-center">No hay archivos</p>');
+			}
+		}
+	});
+
+		/*ARCHIVOS*/
+
+	console.log("Archivos por carpetas");	
+	var carpeta = "carpeta="+$("#carpetaActual").val();
+	$.ajax({
+		url:"ajax/archivo.php?accion=obtener",
+		dataType:'json',
+		method:"POST",
+		data:carpeta,
+		success:function(respuesta){
+			console.log("archivos");
+			console.log(respuesta);
+			
+		}
+	});
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $("#btn-crear").click(function () {
 	// body...
 	alert("Funciona");
@@ -164,7 +234,7 @@ $("#btn-agregarCarpeta").click(function () {
                             <p>
                               <i style="font-size: 40px; padding-right: 10px; color: gray;" class="fas fa-folder folder "></i>
                                  ${ $("#nombreC").val()  }
-                            </p>
+                            </p> 
                         </a>
                     </div>`
 
