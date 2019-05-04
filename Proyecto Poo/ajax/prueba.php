@@ -1,22 +1,13 @@
 <?php
- include("../class/usuarios.php");
+ 
+	include_once '../class/class-carpeta.php';
 
-   if(Usuario::validarCorreo("hola.ruby@hotmail.com")){
 
-            echo '{"status":1, "mensaje":"correo"}';
-     }else{
-            echo '{"status":0, "mensaje":"Fallo"}';
-     }
-    
+ 
+ 
+	echo Carpeta::obtener("home",1);
 
-      echo"<br>";
 
-    
-     if(Usuario::validarContrasenia("rr")){
-                  echo '{"status":1, "mensaje":"contra"}';
-     }else{
-                   echo '{"status":0, "mensaje":"Fallo"}';
-          }
 
 
 ?>

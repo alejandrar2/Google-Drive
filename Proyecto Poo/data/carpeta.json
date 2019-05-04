@@ -1,1 +1,19 @@
-[{"codigoCarpeta":,"codigoArchivo":,"codigoUsuario":,"nombre":"","fecha":""}]
+[
+
+	{"codigoCarpeta":1,"carpeta":"home","CodigoUsuario":1,"nombre":"Unah","fecha":"12-10-19"},
+	{"codigoCarpeta":2,"carpeta":"home","CodigoUsuario":1,"nombre":"Rubio","fecha":"12-10-19"},
+	{"codigoCarpeta":3,"carpeta":"home","CodigoUsuario":1,"nombre":"Rubio","fecha":"12-10-19"},
+	{"codigoCarpeta":4,"carpeta":"home","CodigoUsuario":1,"nombre":"Morgan","fecha":"12-10-19"},
+	{"codigoCarpeta":5,"carpeta":"home","CodigoUsuario":1,"nombre":"Rubi","fecha":"12-10-19"},
+	{"codigoCarpeta":6,"carpeta":"Morgan","CodigoUsuario":1,"nombre":"Ceutec","fecha":"12-10-19"},
+	{"codigoCarpeta":6,"carpeta":"Morgan","CodigoUsuario":1,"nombre":"Uth","fecha":"12-10-19"},
+	{"codigoCarpeta":6,"carpeta":"Morgan","CodigoUsuario":1,"nombre":"Unah","fecha":"12-10-19"},
+	{"codigoCarpeta":7,"carpeta":"Rubio","CodigoUsuario":1,"nombre":"Hola","fecha":"12-10-19"},
+	{"codigoCarpeta":8,"carpeta":"Rubi","CodigoUsuario":1,"nombre":"Ecua","fecha":"12-10-19"},
+	{"codigoCarpeta":8,"carpeta":"Rubi","CodigoUsuario":1,"nombre":"Sistemas","fecha":"12-10-19"},
+	{"codigoCarpeta":8,"carpeta":"Rubi","CodigoUsuario":1,"nombre":"Poo","fecha":"12-10-19"},
+	{"codigoCarpeta":9,"carpeta":"home","CodigoUsuario":1,"nombre":"home","fecha":"12-10-19"}
+	
+
+
+]
