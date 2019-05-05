@@ -4,7 +4,7 @@
 	switch ($_GET["accion"]) {
 		case 'agregar':
 
-			$carpeta = new Carpeta(null, $_POST["carpeta"], 1, $_POST["nombre"],"12-10-19");
+			$carpeta = new Carpeta(null, $_POST["carpeta"], $_POST["usuario"], $_POST["nombre"],"12-10-19");
 
 			$carpeta->agregarCarpeta();
 

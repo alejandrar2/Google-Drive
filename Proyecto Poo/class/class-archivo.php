@@ -3,28 +3,33 @@
 		private $codigoArchivo;
         private $codigoUsuario; 
         private $codigoCartpeta;
-        private $usuario;
 		private $extencion;
         private $nombre;
+        private $ruta;
         private $fecha;
+        
+
 
 		
 		 public function __construct(
     	$codigoArchivo,
-        $codigoUsuario,
         $codigoCarpeta,
-        $usuario,
-    	$extencion,
+        $codigoUsuario,
         $nombre,
+        $extencion,
+        $ruta,
         $fecha
+        
     
     ){
 		   $this->codigoArchivo = $codigoArchivo;
            $this->codigoCarpeta = $codigoCarpeta;
-           $this->usuario = $usuario;
-		   $this->extencion = $extencion;
+           $this->codigoUsuario = $codigoUsuario;
            $this->nombre = $nombre;
+		   $this->extencion = $extencion;
+           $this->ruta = $ruta;
            $this->fecha = $fecha;
+
          
 		 }
 		 
@@ -99,23 +104,41 @@
                 $archivos = json_decode(file_get_contents("../data/archivo.json"),true);
                 
                 $t["codigoArchivo"]=( $archivos[count($archivos)-1]["codigoArchivo"] )+1;
-                $t["codigoUsuario"]=$this->codigoUsuario;
                 $t["codigoCarpeta"]=$this->codigoCarpeta;
-                $t["usuario"]=$this->usuario;
-                $t["extencion"]=$this->extencion;
+                $t["codigoUsuario"]=$this->codigoUsuario;
                 $t["nombre"]=$this->nombre;
+                $t["extencion"]=$this->extencion;
+                $t["ruta"]=$this->ruta;
                 $t["fecha"]=$this->fecha;
+
                 
                 $archivos[] = $t;
                 $arc = fopen("../data/archivo.json","w");
                 fwrite($arc, json_encode($archivos));
         }
 
-        public static function obtenerArchivo(){
-           return file_get_contents("../data/archivo.json" );
+        public static function obtenerArchivos($nombreCarpeta, $usuario){
+            $archivos = json_decode(file_get_contents("../data/archivo.json"),true);
+            include_once 'class-carpeta.php';
+
+            $idCarpeta = Carpeta::obtenerId($nombreCarpeta,1);
+
+            $tem = array();
+            $con=0;
+        
+            for ($i=0; $i < count($archivos); $i++) { 
+                if ($archivos[$i]["codigoUsuario"]==$usuario && $archivos[$i]["codigoCarpeta"]==$idCarpeta) {
+                   $tem[$con]=$archivos[$i];
+                   $con++;
+                }
+            }
+            return json_encode($tem);
         }
 
 
-
     }
+
+
+
+    
 ?>
