@@ -31,6 +31,7 @@
 							<a class="acolor" href="#">Más información</a> </p>
 						<div class="row">
 							<div class="col">
+								<br><br>
 								<a class="acolor mv" href="#">Crear cuenta</a>
 								<button  id="btn-login"class="btn-sg btn-primary mv2">Siguiente</button>
 							</div>

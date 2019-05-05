@@ -14,7 +14,7 @@
 
 		case 'obtener':
 
-			echo Carpeta::obtener($_POST["carpeta"],1);
+			echo Carpeta::obtener($_POST["carpeta"],$_POST["usuario"]);
 
 		break;
 	
