@@ -5,13 +5,15 @@
 		private $correo;
 		private $contra1;
 		private $contra2;
-		
+		private $tipo;
+
 		 public function __construct(
 		$codigoUsuario,
 		$codigoPersona,
     	$correo,
     	$contra1,
-    	$contra2
+    	$contra2,
+        $tipo
     ){
 		$this->codigoUsuario = $codigoUsuario;
 		$this->codigoPersona =$codigoPersona;
@@ -26,7 +28,6 @@
     }
 
         
-   
         public function setcodigoUsuario($codigoUsuario)
         {
                 $this->codigoUsuario = $codigoUsuario;
@@ -85,14 +86,32 @@
                 return $this;
         }
         
-        public function guardarUsuario(){
+    public function guardarUsuario(){
         $personas = json_decode(file_get_contents("../data/usuario.json"),true);
                 
         $t["codigoUsuario"]=($personas[count($personas)-1]["codigoUsuario"])+1;
-        $t["codigoUsuario"]=$this->codigoUsuario;
-        $t["correo1"]=$this->correo;
+        $t["codigoPersona"]=$this->codigoPersona;
+        $t["correo"]=$this->correo;
         $t["contra1"]=$this->contra1;
         $t["contra2"]=$this->contra2;
+        $t["tipo"]=1;
+
+                
+        $personas[] = $t;
+        $archivo = fopen("../data/usuario.json","w");
+        fwrite($archivo, json_encode($personas));
+    }
+
+     public function guardarAdministrador(){
+        $personas = json_decode(file_get_contents("../data/usuario.json"),true);
+                
+        $t["codigoUsuario"]=($personas[count($personas)-1]["codigoUsuario"])+1;
+        $t["codigoPersona"]=$this->codigoPersona;
+        $t["correo"]=$this->correo;
+        $t["contra1"]=$this->contra1;
+        $t["contra2"]=$this->contra2;
+        $t["tipo"]=2;
+
                 
         $personas[] = $t;
         $archivo = fopen("../data/usuario.json","w");
@@ -127,11 +146,22 @@
         $usuarios = json_decode(file_get_contents("../data/usuario.json"),true);
 
         for($i=0; $i < count($usuarios); $i++){
-            if($usuarios[$i]["contra1"] == $contrasenia){
+            if($usuarios[$i]["contra1"]==$contrasenia){
                 return true;
             }
         }
         return false;
+    }
+
+    public static function obtenerUsuario($contrasenia){
+            $usuarios = json_decode(file_get_contents("../data/usuario.json"),true);
+
+            for ($i=0; $i < count($usuarios); $i++) { 
+                if ($usuarios[$i]["contra1"] == $contrasenia){
+                    return $usuarios[$i]["codigoUsuario"];
+                }
+            }
+            return null;
     } 
 
 

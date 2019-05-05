@@ -44,30 +44,6 @@ $(document).ready(function($) {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $("#btn-crear").click(function () {
 	// body...
 	alert("Funciona");
@@ -83,7 +59,13 @@ $("#btn-sg").click(function () {
 	var contra2 = $("#contra2").val();
 
 	 if($("#contra1").val()=="" && $("#contra2").val()==""){
-	 	alert(" contraseñas distintas");
+	 	alert("Campos requeridos");
+	 	return;
+	 	
+	 }
+
+	  if($("#contra1").val()!=$("#contra2").val()){
+	 	alert("No coinciden la contraseña");
 	 	return;
 	 	
 	 }
@@ -100,7 +82,7 @@ $("#btn-sg").click(function () {
 			console.log(res);
 
 			if (res.Codigo == 1) {
-				location.href ="googledrive.php";
+				//location.href ="googledrive.php";
 			}
 
 
@@ -123,6 +105,7 @@ $("#btn-login").click(function () {
 
 	var correo = $("#correo-inicio").val();
 	var parametros = "correo="+correo;
+
 	$.ajax({
 		url:'ajax/usuario.php?accion=validarCorreo',
 		method:'POST',
@@ -134,7 +117,7 @@ $("#btn-login").click(function () {
 			if(res.status == 1){
 				location.href ="contrasenia.php?correo="+correo;
 			}else{
-				$("#res").html(`<div class="alert alert-danger" role="alert">
+				$("#respuesta").html(`<div class="alert alert-danger" role="alert">
 									correo incorrecto
 								</div>`)
 			}
@@ -156,7 +139,10 @@ $("#btn-contrasenia").click(function () {
 	}
 
 	var contrasenia = $("#contrasenia").val();
-	var parametros = "contrasenia="+contrasenia;
+	var parametros = "contrasenia="+contrasenia+"&correo="+$("#correo").val();
+
+	console.log(parametros);
+
 	$.ajax({
 		url:'ajax/usuario.php?accion=validarContrasenia',
 		method:'POST',
@@ -168,7 +154,7 @@ $("#btn-contrasenia").click(function () {
 			if(res.status == 1){
 				location.href ="googledrive.php?";
 			}else{
-				$("#res").html(`<div class="alert alert-danger" role="alert">
+				$("#respuesta").html(`<div class="alert alert-danger" role="alert">
 									correo incorrecto
 								</div>`)
 			}

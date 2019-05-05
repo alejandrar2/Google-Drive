@@ -21,42 +21,42 @@
 					<img src="img/image8.png">
 					<h1 class="lt" >Crear tu cuenta de Google</h1>
 					<h2 class="lte" >Ir a Google Drive</h2><br>
-				
-						<div class="row">
-							<div class="col">
-								<input type="text" class="form-control" placeholder="Nombre" id="nombre" >
-							</div>
-							<div class="col">
-								<input type="text" class="form-control" placeholder="Apellido" id="apellido" >
-							</div>
+					
+					<div class="row">
+						<div class="col">
+							<input type="text" class="form-control" placeholder="Nombre" id="nombre" >
 						</div>
-						<br>
-						<div class="form-group">
-							<input class="form-control"  type="email" name="correo" id="correo" placeholder="Correo" required autofocus >
-							<p style="font-size: 13px;"> Puedes usar letras, números y signos de puntuación </p>
-							<a class="acolor" style="font-size: 13px;" href=""><b>Usar mi dirección de correo electrónico actual en su lugar</b></a>
+						<div class="col">
+							<input type="text" class="form-control" placeholder="Apellido" id="apellido" >
 						</div>
-						<div class="row">
-							<div class="col">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Contraseña" id="contra1" required autofocus>	
-								</div>
-							</div>
-							<div class="col">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Confirmacion" id="contra2" required autofocus>	
-								</div>
-								
-							</div>
+					</div>
+					<br>
+					<div class="form-group">
+						<input class="form-control"  type="email" name="correo" id="correo" placeholder="Correo" required autofocus >
+						<p style="font-size: 13px;"> Puedes usar letras, números y signos de puntuación </p>
+						<a class="acolor" style="font-size: 13px;" href=""><b>Usar mi dirección de correo electrónico actual en su lugar</b></a>
+					</div>
+					<div class="row">
+						<div class="col">
 							<div class="form-group">
-								<p style="font-size: 13px;">   Usa 8 o más caracteres con una combinación de letras, números y símbolos</p>
+								<input type="text" class="form-control" placeholder="Contraseña" id="contra1" required autofocus>	
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Confirmacion" id="contra2" required autofocus>	
 							</div>
 							
 						</div>
-						<br>
-						<a style="font-size: 13px;" class="acolor" href=""><b>Acceder a tu cuenta en su lugar</b> </a>
-						<button id="btn-sg" class="btn btn-primary" style="display: block;float: right;" type="button">Siguiente</button>
-				
+						<div class="form-group">
+							<p style="font-size: 13px;">   Usa 8 o más caracteres con una combinación de letras, números y símbolos</p>
+						</div>
+						
+					</div>
+					<br>
+					<a style="font-size: 13px;" class="acolor" href=""><b>Acceder a tu cuenta en su lugar</b> </a>
+					<button id="btn-sg" class="btn btn-primary" style="display: block;float: right;" type="button">Siguiente</button>
+					
 				</div>
 				<div class="col-6">
 					<br><br>
@@ -72,14 +72,14 @@
 		<div class="col-3"></div>
 	</div>
 	
-	</div>
-	<div class="col-3"></div>
+</div>
+<div class="col-3"></div>
 
 
 </div>
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/controlador.js"></script>
- 	<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/controlador.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
 
