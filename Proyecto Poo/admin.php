@@ -1,3 +1,19 @@
+<?php  
+
+
+session_start();
+
+
+if (!isset($_SESSION["nombre"]) ) {
+    header("Location: index.php");
+}
+
+
+
+
+
+?>
+
 
 <!doctype html>
 <html lang="en">
@@ -6,7 +22,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="generator" content="Jekyll v3.8.5">
-  <title>Administrador Google Drive</title>
+  <title>Administracion</title>
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.css" rel="stylesheet">
@@ -32,16 +48,14 @@
 </head>
 <body class="bg-light">
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-    <a class="navbar-brand mr-auto mr-lg-0" href="#"> Administrador Google Drive</a>
+    <a class="navbar-brand mr-auto mr-lg-0" href="#"> Administracion</a>
     <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    
   </nav>
 
   <div class="nav-scroller bg-white shadow-sm">
-  
+
   </div>
 
   <main role="main" class="container">
@@ -53,8 +67,13 @@
       </div>
     </div>
 
-    <div class="my-3 p-3 bg-white rounded shadow-sm">
-      <h6 class="border-bottom border-gray pb-2 mb-0">Recent updates</h6>
+    <div class="text-center">
+      <h5 class="my-3 p-3 bg-white rounded shadow-sm">Bienvenido <?php echo $_SESSION["nombre"]; ?></h5>
+    </div>
+
+    <div class="my-3 p-3 bg-white rounded shadow-sm" id="usuarios">
+      <h6 class="border-bottom border-gray pb-2 mb-0">Usuarios</h6>
+<!--
       <div class="media text-muted pt-3">
         <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
         <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
@@ -62,33 +81,46 @@
           Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
         </p>
       </div>
-      <div class="media text-muted pt-3">
-        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#e83e8c"/><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text></svg>
-        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-          <strong class="d-block text-gray-dark">@username</strong>
-          Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-        </p>
-      </div>
-      <div class="media text-muted pt-3">
-        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#6f42c1"/><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text></svg>
-        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-          <strong class="d-block text-gray-dark">@username</strong>
-          Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-        </p>
-      </div>
-      <small class="d-block text-right mt-3">
-        <a href="#">All updates</a>
-      </small>
-    </div>
+    -->     
 
-    <div class="my-3 p-3 bg-white rounded shadow-sm">
-      <h6 class="border-bottom border-gray pb-2 mb-0">Registro de administradores</h6>
-      
-        <div class="row">
-    <div class="col-3"></div>
-    <div class="col-6">
-      <div style=" padding: 15px; border: darkcyan solid 1px; border-radius: 10px; padding-top: 40px; padding-bottom: 40px;"  class="row">
-        <div class="col-12">
+  </div>
+  <br>
+  <div class="my-3 p-3 bg-white rounded shadow-sm" id="admin">
+    <h6 class="border-bottom border-gray pb-2 mb-0">Administradores</h6>
+<!--
+      <div class="media text-muted pt-3">
+        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+          <strong class="d-block text-gray-dark">@username</strong>
+          Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        </p>
+      </div>
+    -->     
+
+  </div>
+  <div class="my-3 p-3 bg-white rounded shadow-sm">
+
+    <div class="row">
+      <div class="col-md-6">
+        <button id="nuevo" class="btn btn-success" >Nuevo Admin</button>
+      </div>
+      <div class="col-md-6">
+        <small class="d-block text-right mt-3">
+          <a href="logout.php">Cerrar Seccion</a>
+        </small>
+      </div>
+    </div>
+    
+  </div>
+
+  <div id="fom-admin" class="my-3 p-3 bg-white rounded shadow-sm">
+    <h6 class="border-bottom border-gray pb-2 mb-0">Registro de administradores</h6>
+  <br><br><br>
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <div style=" padding: 15px; border: darkcyan solid 1px; border-radius: 10px; padding-top: 40px; padding-bottom: 40px;"  class="row">
+          <div class="col-12">
             <div class="row">
               <div class="col">
                 <input type="text" class="form-control" placeholder="Nombre" id="nombre" >
@@ -120,25 +152,25 @@
             </div>
             <br>
             <button id="btn-crearUsr" class="btn btn-primary" style="display: block;float: right;" type="button">Crear Usuario</button>
-      
-        <br><br>
+
+            <br><br>
+          </div>
+        </div>
+        <div class="col-3"></div>
       </div>
-    </div>
-    <div class="col-3"></div>
+
+    </form>   
+
   </div>
+</main>
 
-      </form>   
-   
-    </div>
-  </main>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/controlador.js"></script>
 
-  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/controlador.js"></script>
 
-  
-  <script>
-    window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
-  </script>
+<script>
+  window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
+</script>
 </body>
 </html>

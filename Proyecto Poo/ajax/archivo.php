@@ -16,7 +16,7 @@ switch ($_GET["accion"]) {
             $src = $carpeta.$nombre;
             move_uploaded_file($ruta_provisional, $src);
 
-            $cod = Carpeta::obtenerId($_GET["carpeta"], $_GET["usuario"]);
+            $cod = Carpeta::obtenerId($_GET["carpeta"], (int)$_GET["usuario"]);
 
             $archivo = new Archivo(null, (int)$cod, (int)$_GET["usuario"], $nombre, $ext, $ruta, "12-4-2019");
 
@@ -34,7 +34,7 @@ switch ($_GET["accion"]) {
      break;
 
      case 'obtener':
-            echo Archivo::obtenerArchivos($_POST["carpeta"],$_POST["usuario"]);
+            echo Archivo::obtenerArchivos($_POST["carpeta"],(int)$_POST["usuario"]);
      break;
 
      default:

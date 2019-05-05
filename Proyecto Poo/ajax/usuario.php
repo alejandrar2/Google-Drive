@@ -10,11 +10,12 @@ switch ($_GET["accion"]){
             $persona->guardarPersona();
             $ultimo = $persona->obtenerUltimo();
 
-            $usuario = new Usuario( null, $ultimo, $_POST["correo"], $_POST["contra1"], $_POST["contra2"], null );
+            $usuario = new Usuario( null, (int)$ultimo, $_POST["correo"], $_POST["contra1"], $_POST["contra2"], null );
             $usuario->guardarUsuario();
       
             echo '{"resultado": "Agregado", "Codigo": 1 }';
 
+            $_SESSION["usuario"] = Usuario::obtenerUsuario($_POST["contra1"]);
 
       break;
 
@@ -48,7 +49,29 @@ switch ($_GET["accion"]){
                    echo '{"status":0, "mensaje":"Fallo"}';
             }
       break;
+
+      case 'ObtenerAbmin':
+        echo Usuario::obtenerAdmin();
+      break;
+
+      case 'ObtenerUsr':
+        echo Usuario::obtenerUsr();
+      break;
   
+      case 'validarAdmin':
+
+        if( Usuario::validarAdmin($_POST["correo"], $_POST["contrasenia"]) ) {
+
+          $_SESSION["nombre"] = Usuario::obtenerUsuarioCorreo($_POST["correo"]);
+
+          echo '{"status":1, "mensaje":"Exitoso"}';
+        }else{
+            echo '{"status":0, "mensaje":"Fallo"}';
+        }
+
+        
+      break;
+
       default:
           echo '{"status":0, "mensaje":"Opcion no valida"}';
                 

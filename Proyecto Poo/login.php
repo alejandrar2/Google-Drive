@@ -32,7 +32,7 @@
 						<div class="row">
 							<div class="col">
 								<br><br>
-								<a class="acolor mv" href="#">Crear cuenta</a>
+								<a class="acolor mv" href="crear-cuenta.php">Crear cuenta</a>
 								<button  id="btn-login"class="btn-sg btn-primary mv2">Siguiente</button>
 							</div>
 						</div>

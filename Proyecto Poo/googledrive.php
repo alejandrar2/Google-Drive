@@ -5,13 +5,9 @@ if (!isset($_GET["carpeta"])) {
 
 session_start();
 
-if (!isset($_SESSION["usuario"])) {
+if (!isset($_SESSION["usuario"]) ) {
     header("Location: login.php");
 }
-
-
-    
-
 
 ?>
 
@@ -21,6 +17,7 @@ if (!isset($_SESSION["usuario"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/googledrive.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="icon" href="img/Google_Drive_logo.png">
@@ -95,14 +92,15 @@ if (!isset($_SESSION["usuario"])) {
                 <label for="chk"><span><i class="fas fa-cog"></i></span></label>
                 <label for="chk"><span><i class="fas fa-th"></i></i></span></label>
                 <label for="chk"><span><i class="fas fa-bell"></i></span></label>
-                <label for="chk"><span><i class="fas fa-user-circle"></i></span></label>
+                <a href="logout.php"><label for="chk"><span><i class="fas fa-user-circle"></i></span></label></a>
+
             </section>
 
         </div>
         <!--FIN Menu-->
 
         <div class=" container-fluid content_second">
-            <input type="text" id="carpetaActual" class="form-control" 
+            <input type="hidden" id="carpetaActual" class="form-control" 
             value="<?php echo isset($_GET['carpeta'])?$_GET['carpeta']:''; ?>" disabled><br>
             <input type="hidden" name="" id="usuario" value="<?php echo $_SESSION["usuario"]; ?>">
 

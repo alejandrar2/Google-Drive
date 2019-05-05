@@ -39,12 +39,12 @@
 					<div class="row">
 						<div class="col">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Contraseña" id="contra1" required autofocus>	
+								<input type="password" class="form-control" placeholder="Contraseña" id="contra1" required autofocus>	
 							</div>
 						</div>
 						<div class="col">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Confirmacion" id="contra2" required autofocus>	
+								<input type="password" class="form-control" placeholder="Confirmacion" id="contra2" required autofocus>	
 							</div>
 							
 						</div>

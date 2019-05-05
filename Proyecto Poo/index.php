@@ -33,6 +33,7 @@
 					<li class="nav-item"><a class="nav-link" href="#">Descargar</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Para el trabajo</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Ayuda</a></li>
+					<li class="nav-item"><a class="nav-link" href="loginCorreo.php">Adminitracion</a></li>
 					<li class="nav-item"><a class="nav-link-azul" href="googledrive.php" style="color:white">Ir A Google Drive</a></li>
 				</ul>
 			</div>

@@ -1,10 +1,3 @@
-<?php 
-	session_start();
-
-	echo $_SESSION["usuario"];
-
-
- ?>
 
 
 <!DOCTYPE html>
@@ -28,7 +21,7 @@
 				<h5 class="text-center"><?php echo $_GET["correo"] ?> </h5><br>
 				<div class="form-group ">
 					<label></label>
-					<input class="form-control caja " type="email" name="correo" id="contrasenia"  placeholder="Contraseña">
+					<input class="form-control caja " type="password" name="correo" id="contrasenia"  placeholder="Contraseña">
 				</div>
 				<br><br>
 				<div class="form-group ">
