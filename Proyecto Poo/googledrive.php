@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/googledrive.css">
+    
     <link rel="icon" href="img/Google_Drive_logo.png">
     <title>Google Drive</title>
     <style>
@@ -30,9 +30,10 @@
             <div class="buttons first">
                 <img src="img/Google_Drive_logo.png" width="40px" heigth="40px"> <p>Drive</p>
             </div>
-            <a href="#" class="buttons second">
-                <img src="img/captura.png" width="40" height="35"><p>Nuevo</p>
+            <a href="#" data-target='lista' class="buttons second dropdown-trigger">
+                <img src="img/captura.png" width="40" height="40"><p><br><hr>Nuevo</p>
             </a>
+        
             <section>
                 <label for="rad1"><span><i class="fas fa-laptop-code"></i></span> Mi unidad</label>
                 <label for="rad2"><span><i class="fas fa-chalkboard"></i></span> Ordenadores</label>
@@ -69,7 +70,7 @@
                 
       </div>
       <!--FIN Menu-->
-    
+     
 
 
 
@@ -119,8 +120,6 @@
         Carpeta
     </button>
    
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="js/controlador.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+    
 </body>
 </html>
